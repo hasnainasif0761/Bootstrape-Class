@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Content</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parallex-hero
+        {
+            position: relative;
+            height: 80vh;
+             background-image: url('https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?semt=ais_hybrid&w=740&q=80');
+             background-attachment: fixed;
+             background-repeat: no-repeat;
+             background-size: cover;
+             background-position:  center;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             text-align: center;
+        }
+        .overlay
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(60, 0, 0, 0.65); /* Dark maroon overlay for readability */
+            z-index: 1;
+        }
+        .hero-content
+        {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 30px;
+            color: white;
+        }
+        .normal-section
+        {
+            border: 1px solid red;
+            padding: 100px 20px;
+        }
+    </style>
+</head>
+<body>
+        <section class="normal-section">
+        <div class="container">
+            <h2>Normal Content Section</h2>
+            <p>Yeh content scroll hota jayega jabki peeche ki building image fixed rahegi.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+    <section>
+        <div class="parallex-hero">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                            <h1>CURABITUR ULLAMCORPER ULTRICIES</h1>
+            <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+            </div>
+        </div>
+    </section>
+    <section class="normal-section">
+        <div class="container">
+            <h2>Normal Content Section</h2>
+            <p>Yeh content scroll hota jayega jabki peeche ki building image fixed rahegi.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+</body>
+</html>

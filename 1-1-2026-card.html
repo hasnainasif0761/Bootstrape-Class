@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Background Parallax Hero</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Fixed Parallax Background Hero */
+.parallax-hero {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    background-image: url('https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?semt=ais_hybrid&w=740&q=80');
+    background-attachment: fixed; /* Yeh fixed effect deta hai */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(60, 0, 0, 0.65); /* Dark maroon overlay for readability */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 30px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Normal Sections (jo scroll hongi) */
+.normal-section {
+    padding: 100px 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.normal-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 300px;
+    font-size: 1.2rem;
+}
+
+/* Mobile Fix - iOS/Android pe fixed background issue hota hai */
+@media (max-width: 768px) {
+    .parallax-hero {
+        background-attachment: scroll; /* Mobile pe smooth scrolling ke liye */
+        height: 80vh;
+    }
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Background Hero Section -->
+    <section class="parallax-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>CURABITUR ULLAMCORPER ULTRICIES</h1>
+            <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+        </div>
+    </section>
+
+    <!-- Normal Scrolling Content (jo background ke upar se scroll karega) -->
+    <section class="normal-section">
+        <div class="container">
+            <h2>Normal Content Section</h2>
+            <p>Yeh content scroll hota jayega jabki peeche ki building image fixed rahegi.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="cards">
+                <div class="card">Card 1</div>
+                <div class="card">Card 2</div>
+                <div class="card">Card 3</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="normal-section" style="min-height: 100vh;">
+        <div class="container">
+            <h2>Another Section</h2>
+            <p>Aur content yahan add kar sakte ho. Scroll karo toh parallax effect dikhega!</p>
+        </div>
+    </section>
+
+</body>
+</html>
